@@ -1,16 +1,15 @@
+import { Route, Routes, Navigate, BrowserRouter} from "react-router-dom";
+import { Home } from "../pages/Home";
+import { Tweets } from "../pages/Tweets";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tweets" element={<Tweets />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </BrowserRouter>
   );
 };

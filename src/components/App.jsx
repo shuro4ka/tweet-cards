@@ -4,7 +4,7 @@ import { Tweets } from "../pages/Tweets";
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/tweet-cards">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tweets" element={<Tweets />} />
